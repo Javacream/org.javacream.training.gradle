@@ -1,0 +1,19 @@
+def scriptVar = "Var defined in Script"
+println("In Script: ${scriptVar}")
+
+task step1 {
+    def param = "Param in Step1"
+    println("In step1 ${param}")
+    doFirst {println("doFirst in step1, param=" + param)}
+    doFirst {println("another doFirst in step1, param=" + param)}
+}
+
+task step2(dependsOn: "step1") {
+    def param = "Param in Step2"
+    println("In step2 ${param}")
+    doFirst {println("doFirst in step2, param=" + param)}
+}
+
+step1.doFirst {println("one more doFirst in step1, param is not available")}
+
+
