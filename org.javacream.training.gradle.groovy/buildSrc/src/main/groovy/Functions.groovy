@@ -1,7 +1,5 @@
 package org.javacream.training.groovy
 
-import groovy.transform.Canonical
- 
 class FunctionDemo{
 	String demo = "Hello"
 	def demoFunction(String param1, Integer param2){
