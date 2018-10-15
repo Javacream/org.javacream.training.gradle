@@ -1,0 +1,5 @@
+task demo {
+	org.javacream.training.groovy.PeopleMain.main()
+	org.javacream.training.java.PeopleMain.main()
+}
+
