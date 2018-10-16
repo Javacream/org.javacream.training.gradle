@@ -1,0 +1,25 @@
+apply plugin: GreetingPlugin
+
+task demo {
+    println("demo1")
+    doLast {
+        org.javacream.training.groovy.CollectionsDemo.main()
+    }
+}
+
+
+task demo2 (dependsOn: demo) {
+    println("demo2")
+    doFirst {
+        println("doFirst 1 demo2")
+    }
+    doFirst {
+        println("doFirst 2 demo2")
+    }
+    doLast {
+        println("doLast demo2")
+    }
+}
+ext {
+    greeting.message = "Hello"
+}
