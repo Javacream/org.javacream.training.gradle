@@ -3,6 +3,5 @@ task demo {
 	//org.javacream.training.java.PeopleMain.main()
 	//org.javacream.training.groovy.FunctionDemo.main()
 	org.javacream.training.groovy.CollectionsDemo.main()
-
 }
 
